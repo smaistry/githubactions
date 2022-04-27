@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [main]
+    branches: [Bug*]
   pull_request:
     branches: [main]
 
@@ -34,7 +34,6 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-
       # List all the file on repo
       - name: List all the file on repo
         run: ls ${{ github.workspace }}
@@ -44,3 +43,16 @@ jobs:
         run: |
           terraform init
           terraform validate
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Install yamllint
+        run: pip install yamllint
+        
+# https://yamllint.readthedocs.io/en/stable/rules.html
+      - name: Validate Yml Files
+        run: |
+             yamllint -d relaxed $(git ls-files '*.yaml' '*.yml')
+      # yamllint --strict $(git ls-files '*.yaml' '*.yml')
