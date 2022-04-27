@@ -38,4 +38,4 @@ jobs:
 
       # List all the file on repo
       - name: List all the file on repo
-        run: ls {{ github.workspace }}
+        run: ls ${{ github.workspace }}
