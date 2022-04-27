@@ -34,3 +34,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+
+      # List all the file on repo
+      - name: List all the file on repo
+        run: ls {{ github.workspace }}
