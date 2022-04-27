@@ -47,13 +47,5 @@ jobs:
           
       # Validate Yml Files https://yamllint.readthedocs.io/en/stable/rules.html
       - name: Validate Yml Files
-        run: |
-          sudo apt-get install yamllint
-          rules:
-           comments:
-             require-starting-space: true
-             ignore-shebangs: true
-             min-spaces-from-content: 2
-          yamllint *.yml  
-          
+        run: yamllint --strict $(git ls-files '*.yaml' '*.yml')
  
