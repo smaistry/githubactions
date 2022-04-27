@@ -40,7 +40,7 @@ jobs:
         run: ls ${{ github.workspace }}
 
       # Terraform validate
-      - name: List all the file on repo
+      - name: Terraform validate
         run: |
           terraform init
           terraform validate
