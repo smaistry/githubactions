@@ -28,3 +28,4 @@ rules:
     allow-non-breakable-inline-mappings: true
   truthy: disable
   trailing-spaces: disable
+    level: warning
