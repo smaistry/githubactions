@@ -1,10 +1,10 @@
-# This is 
+# This is
 
 name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers 
+  # Triggers
   push:
     branches:
         - Bug*
