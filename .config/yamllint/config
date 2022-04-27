@@ -29,4 +29,4 @@ rules:
   truthy: disable
   trailing-spaces: disable
     ignore: |
-         *githubactions/.github/workflows/blank.yml
+         *blank.yml
