@@ -55,6 +55,7 @@ jobs:
 
       - name: Lint YAML files
         run: |
+          yamlint --fix
           yamllint .
           yamllint --format github
         
