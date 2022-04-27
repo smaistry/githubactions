@@ -1,4 +1,6 @@
 provider "aws" {
-  region  = us-west-2
-  version = "~> 2.70"
+  region  = var.aws_region
+  assume_role {
+    role_arn = var.role_arn
+  }
 }
