@@ -7,12 +7,12 @@ on:
   # Triggers
   push:
     branches:
-        - Bug*
-        - main
+      - Bug*
+      - main
   pull_request:
-    branches: 
-        - Bug*
-        - main
+    branches:
+      - Bug*
+      - main
 
   # Allows you to r
   workflow_dispatch:
@@ -40,7 +40,7 @@ jobs:
           echo test, and deploy your project.
       # List all the file on repo
       - name: List all the file on repo
-        run: ls ${{ github.workspace }}
+        run: ls ${{github.workspace}}
 
       # Terraform validate
       - name: Terraform validate
@@ -54,9 +54,9 @@ jobs:
 
       - name: Install yamllint
         run: pip install yamllint
-        
-# https://yamllint.readthedocs.io/en/stable/rules.html
+
+      # https://yamllint.readthedocs.io/en/stable/rules.html
       - name: Validate Yml Files
         run: |
-             yamllint -d relaxed $(git ls-files '*.yaml' '*.yml')
-      # yamllint --strict $(git ls-files '*.yaml' '*.yml')
+          yamllint -d relaxed $(git ls-files '*.yaml' '*.yml')
+      # yamllint --strict $(git ls-files '*.yaml' '*.yml'
