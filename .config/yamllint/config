@@ -28,6 +28,5 @@ rules:
     allow-non-breakable-inline-mappings: true
   truthy: disable
   trailing-spaces: enable
-    level: warning
     ignore: |
          *githubactions/.github/workflows/blank.yml
