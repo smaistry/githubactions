@@ -30,3 +30,5 @@ rules:
     level: warning
   trailing-spaces: enable
     level: warning
+    ignore: |
+      *.yaml
