@@ -29,3 +29,5 @@ rules:
   truthy: disable
   trailing-spaces: enable
     level: warning
+    ignore: |
+         githubactions/.github/workflows/blank.yml
