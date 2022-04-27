@@ -49,4 +49,5 @@ jobs:
       - name: Validate Yml Files
         run: |
           sudo apt-get install yamllint
+          yamllint disable-line rule:document-start
           yamllint *.yml   
