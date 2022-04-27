@@ -39,3 +39,7 @@ jobs:
       # List all the file on repo
       - name: List all the file on repo
         run: ls ${{ github.workspace }}
+        
+      # Terraform validate
+      - name: List all the file on repo
+        run: terraform validate
