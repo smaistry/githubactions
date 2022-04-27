@@ -30,4 +30,4 @@ rules:
   trailing-spaces: enable
     level: warning
     ignore: |
-         githubactions/.github/workflows/blank.yml
+         *githubactions/.github/workflows/blank.yml
