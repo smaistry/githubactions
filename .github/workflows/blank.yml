@@ -45,9 +45,15 @@ jobs:
           terraform init
           terraform validate
           
-      # Validate Yml Files
+      # Validate Yml Files https://yamllint.readthedocs.io/en/stable/rules.html
       - name: Validate Yml Files
         run: |
           sudo apt-get install yamllint
-          yamllint disable-line rule:document-start
-          yamllint *.yml   
+          rules:
+           comments:
+             require-starting-space: true
+             ignore-shebangs: true
+             min-spaces-from-content: 2
+          yamllint *.yml  
+          
+ 
