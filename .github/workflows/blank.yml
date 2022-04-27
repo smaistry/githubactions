@@ -54,7 +54,9 @@ jobs:
         run: pip install yamllint
 
       - name: Lint YAML files
-        run: yamllint .
+        run: |
+          yamllint .
+          yamllint --format github
         
       # Validate Yml Files https://yamllint.readthedocs.io/en/stable/rules.html
       - name: Validate Yml Files
