@@ -55,9 +55,8 @@ jobs:
 
       - name: Lint YAML files
         run: |
-          yamlint --fix
           yamllint .
-          yamllint --format github
+          yamlint --fix
         
 # https://yamllint.readthedocs.io/en/stable/rules.html
       - name: Validate Yml Files
