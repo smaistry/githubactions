@@ -42,4 +42,6 @@ jobs:
         
       # Terraform validate
       - name: List all the file on repo
-        run: terraform validate
+        run:  |
+            terraform init
+            terraform validate
