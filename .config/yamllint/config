@@ -26,4 +26,7 @@ rules:
   line-length:
     level: warning
     allow-non-breakable-inline-mappings: true
-  truthy: false
+  truthy:
+    level: warning
+  trailing-spaces: enable
+    level: warning
