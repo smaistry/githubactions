@@ -44,3 +44,9 @@ jobs:
         run: |
           terraform init
           terraform validate
+          
+      # Validate Yml Files
+      - name: Validate Yml Files
+        run: |
+          sudo apt-get install yamllint
+          yamllint *.yml   
