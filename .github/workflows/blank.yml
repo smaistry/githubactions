@@ -58,7 +58,7 @@ jobs:
           yamllint .
           yamllint --format github
         
-      # Validate Yml Files https://yamllint.readthedocs.io/en/stable/rules.html
+      #https://yamllint.readthedocs.io/en/stable/rules.html
       - name: Validate Yml Files
         run: |
              yamllint -d relaxed $(git ls-files '*.yaml' '*.yml')
